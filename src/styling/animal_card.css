@@ -1,0 +1,24 @@
+.card {
+  margin: 20px;
+  transition: all .1s ease-in;
+  height: fit-content;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 3px 4px 3px rgba(97, 97, 59, 0.5);
+  background: rgba(145, 145, 134, 0.1);
+}
+
+img {
+  max-width: 270px;
+  margin: 15px;
+}
+
+p {
+  font-size: 1.8em;
+  margin: 0;
+  padding: 15px;
+  text-align: left;
+  color: rgb(102, 102, 70);
+}

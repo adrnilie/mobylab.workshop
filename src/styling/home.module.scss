@@ -1,49 +1,50 @@
-$fauna: pink;
-$flora: green;
+@import './variables.scss';
 
 .container {
-  height: calc(100vh - 70px);
   width: 100%;
+  height: calc(100vh - 100px);
+
   display: flex;
   flex-direction: row;
 
-  @mixin myContainer($color, $url) {
-    width: 50%;
-    background-color: $color;
-    background-repeat: no-repeat;
-    background-image: url($url);
-    background-size: cover;
-    background-position: center;
-    transition: all 0.05s;
-    height: calc(100vh - 70px);
-
+  @mixin center() {
     display: flex;
-    justify-content: center;
     align-items: center;
-
-    .linkContainer {
-      height: 100px;
-      width: fit-content;
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-
-      .link {
-        opacity: 1;
-        text-decoration: none;
-        color: black;
-        font-weight: 500;
-        letter-spacing: 0.6px;
-
-        font-size: 100px;
-        color: black;
-      }
-    }
+    justify-content: center;
   }
+
+  @mixin myContainer($color, $path) {
+    width: 50%;
+    height: 100%;
+    background-color: $color;
+
+    @include center();
+    background-image: url($path);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .faunaContainer {
-    @include myContainer($fauna, "../media/fauna.jpg");
+    @include myContainer(red, '../media/fauna.jpg');
   }
   .floraContainer {
-    @include myContainer($flora, "../media/flora.jpg");
+    @include myContainer(blue, '../media/flora.jpg');
+  }
+  .text {
+    height: 100px;
+    width: 300px;
+    background-color: $primary-color;
+
+    @include center();
+    border-radius: 5px;
+
+    a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: $text;
+      letter-spacing: 1px;
+      font-size: 20px;
+      font-weight: 500;
+    }
   }
 }

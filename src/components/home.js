@@ -1,22 +1,18 @@
-import React from "react";
-import styles from "../styling/home.module.scss";
-import { Link } from "react-router-dom";
+import React from 'react';
+import styles from '../styling/home.module.scss';
+import { Link } from 'react-router-dom';
 
-const Home = (props) => {
+const Home = () => {
   return (
     <div className={styles.container}>
       <div className={styles.faunaContainer}>
-        <div className={styles.linkContainer}>
-          <Link className={styles.link} to="/fauna">
-            FAUNA
-          </Link>
+        <div className={styles.text}>
+          <Link to='/fauna'>Fauna</Link>
         </div>
       </div>
       <div className={styles.floraContainer}>
-        <div className={styles.linkContainer}>
-          <Link className={styles.link} to="/flora">
-            FLORA
-          </Link>
+        <div className={styles.text}>
+          <Link to='/flora'>Flora</Link>
         </div>
       </div>
     </div>

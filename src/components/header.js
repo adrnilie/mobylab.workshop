@@ -1,17 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styles from "../styling/header.module.scss";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from '../styling/header.module.scss';
 
-const Header = (props) => {
+const Header = () => {
   return (
     <div className={styles.container}>
-      <Link className={styles.link} to="/">
+      <Link className={styles.link} to='/'>
         Home
       </Link>
-      <Link className={styles.link} to="/fauna">
+      <Link className={styles.link} to='/fauna'>
         Fauna
       </Link>
-      <Link className={styles.link} to="/flora">
+      <Link className={styles.link} to='/flora'>
         Flora
       </Link>
     </div>

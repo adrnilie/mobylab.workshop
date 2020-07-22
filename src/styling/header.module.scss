@@ -1,0 +1,18 @@
+.container {
+  height: 70px;
+  width: 100vw;
+
+  background-color: rgb(204, 204, 231);
+
+  display: flex;
+  flex-direction: row; //default value
+  align-items: center;
+  justify-content: space-evenly;
+
+  .link {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+  }
+}

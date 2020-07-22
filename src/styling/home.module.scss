@@ -1,0 +1,49 @@
+$fauna: pink;
+$flora: green;
+
+.container {
+  height: calc(100vh - 70px);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  @mixin myContainer($color, $url) {
+    width: 50%;
+    background-color: $color;
+    background-repeat: no-repeat;
+    background-image: url($url);
+    background-size: cover;
+    background-position: center;
+    transition: all 0.05s;
+    height: calc(100vh - 70px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .linkContainer {
+      height: 100px;
+      width: fit-content;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+
+      .link {
+        opacity: 1;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        letter-spacing: 0.6px;
+
+        font-size: 100px;
+        color: black;
+      }
+    }
+  }
+  .faunaContainer {
+    @include myContainer($fauna, "../media/fauna.jpg");
+  }
+  .floraContainer {
+    @include myContainer($flora, "../media/flora.jpg");
+  }
+}

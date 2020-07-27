@@ -14,6 +14,7 @@ const Welcome = () => {
       console.error("I will unmount");
     };
   }, []);
+  
 
   // shouldComponentUpdate
   useEffect(() => {

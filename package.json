@@ -8,11 +8,6 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-<<<<<<< Updated upstream
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
-=======
     "autoprefixer": "^9.8.0",
     "axios": "^0.19.2",
     "formik": "^2.1.5",
@@ -24,7 +19,6 @@
     "styled-components": "^5.1.1",
     "underscore": "^1.10.2",
     "yup": "^0.29.3"
->>>>>>> Stashed changes
   },
   "scripts": {
     "start": "react-scripts start",

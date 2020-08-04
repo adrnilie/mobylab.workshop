@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -22,5 +23,11 @@ function App() {
     </div>
   );
 }
+=======
+import React from "react";
+import Contact from "./containers/Contact";
+
+const App = () => <Contact />;
+>>>>>>> Stashed changes
 
 export default App;

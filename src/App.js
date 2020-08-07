@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './home';
+import Header from './header';
+import Login from './loginForm';
+import { Provider } from 'react-redux';
+import store from './redux-config/store';
+import { login } from './redux-config/actions/auth';
+import { getIsLogged } from './getLocalData';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	useEffect(() => {
+		if (getIsLogged()) {
+			store.dispatch(login());
+		}
+	}, []);
+	return (
+		<Provider store={store}>
+			<div className='App'>
+				<BrowserRouter>
+					<Header />
+					<Switch>
+						<Route path='/' exact component={() => <Home />} />
+						<Route path='/login' exact component={() => <Login />} />
+					</Switch>
+				</BrowserRouter>
+			</div>
+		</Provider>
+	);
 }
 
 export default App;

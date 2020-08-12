@@ -1,0 +1,13 @@
+/*dimensions*/
+$header_height: 70px;
+$footer_height: 100px;
+$content_height: calc(100vh - #{$header_height} - #{$footer_height});
+$logo_height: 60px;
+
+/*primary colors*/
+$dark_pink: #ed7b84;
+$light_green: #d6d5b3;
+$beige: #f5dbcb;
+$medium_green: #7eb77f;
+$text: black;
+$white: #f2f2f2;

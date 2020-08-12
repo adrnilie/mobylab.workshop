@@ -1,0 +1,50 @@
+@import './variables.scss';
+
+@mixin layout() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  @include layout();
+  height: $header_height;
+  font-family: 'Sacramento';
+  margin: 0 35px;
+  position: relative;
+
+  .title {
+    font-size: 2em;
+  }
+  .logo {
+    img {
+      height: $logo_height;
+      position: absolute;
+      left: calc(50% - 28px);
+      top: 5px;
+    }
+  }
+}
+
+.navigation {
+  @include layout();
+
+  a {
+    text-decoration: none;
+    color: $text;
+  }
+
+  .link {
+    font-size: 1.6em;
+    margin: 0 30px;
+  }
+
+  .auth {
+    background-color: $light_green;
+    font-family: 'Open Sans Condensed';
+
+    &:hover {
+      background-color: $medium_green;
+    }
+  }
+}

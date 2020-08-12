@@ -1,0 +1,80 @@
+@import './variables.scss';
+
+@mixin horizontal() {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin vertical() {
+  display: flex;
+  flex-direction: column;
+}
+@mixin spaced() {
+  justify-content: space-between;
+}
+
+@mixin center() {
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  height: $footer_height;
+  font-family: 'Open Sans Condensed';
+  background: $beige;
+  @include vertical();
+  color: $text;
+  opacity: 0.6;
+
+  a {
+    text-decoration: none;
+    font-size: 1.2em;
+    opacity: 0.85;
+  }
+
+  .navigation {
+    width: 100%;
+    @include horizontal();
+    @include spaced();
+    height: 60%;
+    margin-top: 10px;
+
+    a {
+      color: $text;
+    }
+
+    .about {
+      @include vertical();
+      margin-left: 5%;
+    }
+
+    .delivery {
+      @include vertical();
+      margin-right: 5%;
+    }
+  }
+
+  .subscribe {
+    @include horizontal();
+    @include center();
+
+    input {
+      height: 30px;
+      background-color: transparent;
+      border: 1px solid $white;
+      font-family: 'Open Sans Condensed';
+      outline: none;
+      padding: 0 5px;
+    }
+    .subscribeButton {
+      height: 32px;
+      padding: 0 5px;
+      border-radius: 0;
+      background-color: $light_green;
+    }
+  }
+  .workshop {
+    @include horizontal();
+    @include center();
+  }
+}

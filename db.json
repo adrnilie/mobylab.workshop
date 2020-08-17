@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "email": "test",
+      "password": "test",
+      "fullName": "Test",
+      "id": 1
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Orhidee",
+      "price": 20
+    },
+    {
+      "id": 2,
+      "name": "Trandafir rosu",
+      "price": 5
+    },
+    {
+      "id": 3,
+      "name": "Trandafir galben",
+      "price": 5
+    },
+    {
+      "id": 4,
+      "name": "Trandafir negru",
+      "price": 5
+    },
+    {
+      "id": 5,
+      "name": "Frezie",
+      "price": 15
+    },
+    {
+      "id": 6,
+      "name": "Zambilele",
+      "price": 20
+    },
+    {
+      "id": 7,
+      "name": "Lalea rosie",
+      "price": 3
+    },
+    {
+      "id": 8,
+      "name": "Lalea negra",
+      "price": 5
+    },
+    {
+      "id": 9,
+      "name": "Lalea galbena",
+      "price": 4
+    },
+    {
+      "name": "Floricica ",
+      "price": "22",
+      "id": 10
+    },
+    {
+      "name": "Zambila roz",
+      "price": "10",
+      "id": 11
+    }
+  ]
+}

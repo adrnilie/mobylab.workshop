@@ -4,16 +4,16 @@ import Home from './pages/home';
 import Auth from './pages/auth';
 import Header from './components/header';
 import Footer from './components/footer';
+import Products from './pages/products';
 
 export const Routes = () => (
   <BrowserRouter>
     <Header />
-
     <Switch>
       <Route path='/' exact component={Home} />
       <Route path='/auth' exact component={Auth} />
+      <Route path='/products' exact component={Products} />
     </Switch>
-
     <Footer />
   </BrowserRouter>
 );

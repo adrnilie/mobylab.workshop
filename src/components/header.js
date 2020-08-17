@@ -3,8 +3,14 @@ import styles from '../styling/header.module.scss';
 import logo from '../media/flower.svg';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { logout } from '../redux/actions/auth';
 
-const Header = props => {
+const Header = ({ logout, logged }) => {
+  const handleLogout = () => {
+    logout();
+  };
+
   return (
     <div className={styles.header}>
       <div className={styles.title}>
@@ -19,11 +25,23 @@ const Header = props => {
         <Link className={styles.link} to='/products'>
           Produse
         </Link>
-        <Button className={styles.auth}>
-          <Link to='/auth'>Autentificare</Link>
-        </Button>
+        {!logged && (
+          <Button className={styles.auth}>
+            <Link to='/auth'>Autentificare</Link>
+          </Button>
+        )}
+        {logged && (
+          <Button className={styles.auth} onClick={handleLogout}>
+            Iesire
+          </Button>
+        )}
       </div>
     </div>
   );
 };
-export default Header;
+
+const mapStateToProps = ({ logged }) => ({ logged });
+const mapDispatchToProps = dispatch => ({
+  logout: () => dispatch(logout())
+});
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

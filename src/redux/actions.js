@@ -1,0 +1,5 @@
+export const ACTIONS = {
+  LOGIN: 'LOGIN',
+  LOGOUT: 'LOGOUT',
+  UPDATE_PRODUCTS: 'UPDATE_PRODUCTS'
+};

@@ -7,6 +7,8 @@ import {
 } from '@material-ui/core';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import styled from 'styled-components';
+import { addProduct } from '../redux/actions/cart';
+import { connect } from 'react-redux';
 
 const MyCard = styled(Card)`
   width: 200px;
@@ -15,18 +17,27 @@ const MyCard = styled(Card)`
   margin: 10px;
 `;
 
-export const CustomCard = product => {
+const CustomCard = ({ product, add }) => {
   return (
     <MyCard>
       <CardActionArea>
         <CardContent>
-          <p>{product.product.name}</p>
-          <p>{product.product.price} RON</p>
+          <p>{product.name}</p>
+          <p>{product.price} RON</p>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <ShoppingBasketIcon />
+        <ShoppingBasketIcon
+          onClick={() => add(product)}
+          style={{ cursor: 'pointer' }}
+        />
       </CardActions>
     </MyCard>
   );
 };
+
+const mapDispatchToProps = dispatch => ({
+  add: product => dispatch(addProduct(product))
+});
+
+export default connect(null, mapDispatchToProps)(CustomCard);
